@@ -273,6 +273,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <testCompilerArgument>${maven.compiler.testCompilerArgument}</testCompilerArgument>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
@@ -382,13 +384,13 @@
 
   <profiles>
     <profile>
-      <id>java16</id>
+      <id>java18</id>
       <activation>
-        <jdk>1.6</jdk>
+        <jdk>1.8</jdk>
       </activation>
       <properties>
-        <maven.compiler.testTarget>1.6</maven.compiler.testTarget>
-        <maven.compiler.testSource>1.6</maven.compiler.testSource>
+        <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
+        <maven.compiler.testSource>1.8</maven.compiler.testSource>
         <maven.compiler.testCompilerArgument />
       </properties>
       <build>
@@ -402,6 +404,8 @@
                   <testExclude>**/usesjava7/**/*.java</testExclude>
                   <testExclude>**/usesjava8/**/*.java</testExclude>
                 </testExcludes>
+                <source>1.8</source>
+                <target>1.8</target>
               </configuration>
             </plugin>
             <plugin>
@@ -437,6 +441,8 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
               <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
                 <testExcludes>
                   <testExclude>**/usesjava8/**/*.java</testExclude>
                 </testExcludes>
